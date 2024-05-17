@@ -25,9 +25,8 @@ const Login = () => {
     event.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch(`${BASE_URL}/auth/login`, {
+      const res = await fetch("https://medicare-lake.vercel.app/api/v1/auth/login", {
         method: 'post',
-        mode: 'no-cors', 
         headers: {
           'Content-Type': 'application/json'
         },
