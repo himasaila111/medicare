@@ -72,9 +72,7 @@ export const register = async (req, res) => {
 
 // login controller
 export const login = async(req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://medicare-app-zeta.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  console.log("came inside login")
     const { 
         email
     } = req.body
@@ -103,9 +101,10 @@ export const login = async(req, res) => {
         if(!isPasswordMatch){
             return res.status(400).json({ status: false, message: 'Invalid Credentials' });
         }
-
+          console.log("creds check done")
         // get token
         const token = generateToken(user);
+      console.log("token is generated")
         console.log(user)
         const { password, role, appointments, ...rest } = user._doc
 
@@ -114,6 +113,7 @@ export const login = async(req, res) => {
             .json({status: true, message: 'Successfully Login', token, data:{...rest}, role});
 
     } catch (error) {
+      console.log("err happend", error)
         res.status(500).json({ status: false, message: 'Failed To Login' });
     }
   }
