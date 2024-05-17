@@ -58,9 +58,11 @@ const Profile = ({ userInfo }) => {
     try {
       const res = await fetch(`${BASE_URL}/users/${user.userData.email}`, {
         method: "put",
+        mode: 'no-cors', 
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${user.token}`,
+         
         },
         body: JSON.stringify(formData),
       });
