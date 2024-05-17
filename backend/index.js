@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 const corsOptions = {
-  origin: ["https://medicare-app-zeta.vercel.app"],
+  origin: "https://medicare-app-zeta.vercel.app",
 methods: ["POST", "GET"],
 credentials: true
 };
