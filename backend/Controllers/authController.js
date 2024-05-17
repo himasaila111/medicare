@@ -72,7 +72,9 @@ export const register = async (req, res) => {
 
 // login controller
 export const login = async(req, res) => {
-
+  res.setHeader('Access-Control-Allow-Origin', 'https://medicare-app-zeta.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     const { 
         email
     } = req.body
