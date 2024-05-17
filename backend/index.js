@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 const corsOptions = {
-  origin: ["https://deploy-mern-1whq.vercel.app", "http://localhost:5173"],
+  origin: ["https://medicare-app-zeta.vercel.app", "http://localhost:5173"],
 methods: ["POST", "GET"],
 credentials: true
 };
