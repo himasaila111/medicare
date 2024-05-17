@@ -4,6 +4,7 @@
     {
       "src": "/api/v1/auth/login",
       "methods": ["OPTIONS", "POST"],
+      "dest": "./",
       "headers": {
         "Access-Control-Allow-Origin": "https://medicare-app-zeta.vercel.app",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE",
