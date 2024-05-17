@@ -43,6 +43,7 @@ const Signup = () => {
     try {
       const res = await fetch(`${BASE_URL}/auth/register`, {
         method: "post",
+         mode: 'no-cors', 
         headers: {
           "Content-Type": "application/json",
         },
